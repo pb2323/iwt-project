@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 import "./loginPageCSS.css";
 
@@ -64,6 +64,9 @@ class Login extends Component {
                 </label>
                 <button type="submit">Login</button>
               </div>
+              <p>
+                Want to Register?<Link to="/register">Click here</Link>{" "}
+              </p>
             </form>
             <div>
               <p style={{ color: "red" }}>{this.state.error}</p>
