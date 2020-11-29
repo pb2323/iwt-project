@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import NavBar from "../components/Navbar";
 import SidePanel from "../components/SidePanel";
 
-export default class HomePage extends Component {
+export default class browserDOMPage extends Component {
   render() {
     if (!localStorage.getItem("user")) return <Redirect to="/login" />;
     else
