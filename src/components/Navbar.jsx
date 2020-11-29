@@ -15,7 +15,9 @@ export default class Navbar extends Component {
             Logout
           </Link>
         </button>
-        <h1 style={{ display: "inline-block", marginLeft: "35%" }}>Welcome</h1>
+        <h1 style={{ display: "inline-block", marginLeft: "27%" }}>
+          <u> Internet and Web Technology</u>
+        </h1>
         <button type="primary" style={{ width: "10%", float: "left" }}>
           <Link style={{ textDecoration: "none" }} to="/">
             Home
