@@ -19,6 +19,8 @@ class Login extends Component {
     api.post("/users/login", { uname: uname, psw: psw }).then((res) => {
       console.log(res);
       if (res.data.message === "Login Successfull") {
+        localStorage.setItem("user", uname);
+        localStorage.setItem("psw", psw);
         this.setState({ error: "", shouldProceed: true });
         return <Redirect to="/" />;
       } else {
