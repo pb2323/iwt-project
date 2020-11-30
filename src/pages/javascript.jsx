@@ -20,65 +20,78 @@ export default class JavascriptPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                Javascript-Introduction
               </h1>
+              <p style={{ padding: "10px" }}>
+                The HTML DOM is an API (Programming Interface) for JavaScript:
+              </p>
               <ul>
-                <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
-                </li>
-                <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
-                </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <li>JavaScript can add/change/remove HTML elements</li>
+                <br />
+                <li>JavaScript can add/change/remove HTML attributes</li>
+                <br />
+                <li>JavaScript can add/change/remove CSS styles</li>
+                <br />
+                <li>JavaScript can react to HTML events</li>
+                <br />
+                <li>JavaScript can add/change/remove HTML events</li>
+                <br />
               </ul>
             </div>
+            <img
+              style={{ position: "absolute", left: "50%", top: "3%" }}
+              src="DOM.gif"
+              alt="DOM"
+            />
             <div
               style={{
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
                 width: "40%",
-                height: "370px",
+                height: "410px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                Finding HTML Elements
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                When you want to access HTML elements with JavaScript, you have
+                to find the elements first. There are a couple of ways to do
+                this:
               </p>
               <ul>
                 <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
+                  Finding HTML elements by id
+                  <br />
+                  <b>Example: </b>
+                  <br />
+                  var myElement = document.getElementById("intro");
                 </li>
                 <br />
                 <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
+                  Finding HTML elements by tag name
+                  <br />
+                  <b>Example: </b>
+                  <br />
+                  var x = document.getElementsByTagName("p");
                 </li>
                 <br />
                 <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
+                  Finding HTML elements by class name
+                  <br />
+                  <b>Example: </b>
+                  <br />
+                  var x = document.getElementsByClassName("intro");
+                </li>
+                <br />
+                <li>
+                  Finding HTML elements by CSS selectors
+                  <br />
+                  <b>Example: </b>
+                  <br />
+                  var x = document.querySelectorAll("p.intro");
                 </li>
                 <br />
               </ul>
@@ -89,7 +102,7 @@ export default class JavascriptPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
+                top: "45%",
                 height: "370px",
               }}
             >
@@ -100,7 +113,7 @@ export default class JavascriptPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                DOM EventListener
               </h1>
               <p style={{ padding: "10px" }}>
                 <b>

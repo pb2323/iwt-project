@@ -20,32 +20,28 @@ export default class nodePage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                NodeJS Introduction
               </h1>
+              <p style={{ padding: "10px" }}>
+                Node.js eliminates the waiting, and simply continues with the
+                next request. Node.js runs single-threaded, non-blocking,
+                asynchronously programming, which is very memory efficient.
+              </p>
+
               <ul>
+                <li>Node.js can generate dynamic page content</li>
+                <br />
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
+                  Node.js can create, open, read, write, delete, and close files
+                  on the server
                 </li>
-                <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
-                </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <br />
+                <li>Node.js can collect form data</li>
+                <br />
+                <li>Node.js can add, delete, modify data in your database</li>
+                <br />
               </ul>
             </div>
             <div

@@ -84,7 +84,7 @@ export default class SidePanel extends Component {
             </Link>
           </p>
         </div>
-        <div style={{ height: "40px" }}>
+        {/* <div style={{ height: "40px" }}>
           <p
             style={{
               fontSize: "20px",
@@ -100,7 +100,7 @@ export default class SidePanel extends Component {
               <strong>Browser DOM</strong>
             </Link>
           </p>
-        </div>
+        </div> */}
         <div style={{ height: "40px" }}>
           <p
             style={{
