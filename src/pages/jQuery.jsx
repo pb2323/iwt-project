@@ -42,12 +42,18 @@ export default class jQueryPage extends Component {
                 </li>
                 <br />
                 <li>The jQuery library contains the following features</li>
+                <br />
                 <ol>
                   <li>HTML/DOM manipulation</li>
+                  <br />
                   <li>CSS manipulation</li>
+                  <br />
                   <li>HTML event methods</li>
+                  <br />
                   <li>Effects and animations</li>
+                  <br />
                   <li>AJAX</li>
+                  <br />
                 </ol>
               </ul>
             </div>
@@ -56,35 +62,25 @@ export default class jQueryPage extends Component {
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
                 width: "40%",
-                height: "370px",
+                height: "300px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                Syntax
               </h1>
+
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                Basic syntax is:
+                <b>$(selector).action()</b>
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
+              <ol>
+                <li>A $ sign to define/access jQuery</li>
                 <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
+                <li>A (selector) to "query (or find)" HTML elements</li>
                 <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
+                <li>A jQuery action() to be performed on the element(s)</li>
                 <br />
-              </ul>
+              </ol>
             </div>
             <div
               style={{
@@ -93,7 +89,7 @@ export default class jQueryPage extends Component {
                 position: "absolute",
                 left: "50%",
                 top: "3%",
-                height: "370px",
+                height: "900px",
               }}
             >
               <h1
@@ -103,72 +99,67 @@ export default class jQueryPage extends Component {
                   margin: "0",
                 }}
               >
-                jQuery Syntax
+                jQuery Effects
               </h1>
-              <p style={{ padding: "10px" }}>
-                Basic syntax is: <b> $(selector).action()</b>
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                Many of the biggest companies on the Web use jQuery, such as:
-                <ul>
-                  <li>Google</li>
-                  <li>Microsoft</li>
-                  <li>Netflix</li>
-                </ul>
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
-              </p>
-            </div>
-            <div
-              style={{
-                backgroundColor: "#eeeeee",
-                marginTop: "30px",
-              }}
-            >
-              <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
-              </h1>
-              <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
-              </p>
-              <ul>
+              <ol>
                 <li>
-                  Front End Developers, who work on the front end designing
+                  <b>Hide and Show</b>
+                  <p>
+                    With jQuery, you can hide and show HTML elements with the
+                    hide() and show() methods:
+                  </p>
+                  <b>Syntax:</b>
+                  <p>$(selector).hide(speed,callback);</p>
+                  <p>{'$("#hide").click(()=>$("p").hide());'}</p>
+                  <p>$(selector).show(speed,callback);</p>
+                  <p>{'$("#show").click(function(){$("p").show();});'}</p>
+                </li>
+
+                <li>
+                  <b>Fading</b>
+                  <b>Syntax:</b>
+                  <p>$(selector).fadeIn(speed,callback);</p>
+                  <p>
+                    {'$("button").click(function(){$("#div1").fadeIn();});'}
+                  </p>
+                  <p>
+                    {'$("button").click(function(){$("#div3").fadeIn(3000);});'}
+                  </p>
                 </li>
                 <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
+                  <b>Animation</b>
+                  <p>{"$(selector).animate({params},speed,callback);"}</p>
+                  <p>
+                    {
+                      '$("button").click(function(){$("div").animate({left: "250px"});});'
+                    }
+                  </p>
+                  <p>
+                    {'$("button").click(function(){$("#div3").fadeIn(3000);});'}
+                  </p>
                 </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
-              </ul>
+                <li>
+                  <b>css</b>
+                  <p>
+                    To return the value of a specified CSS property, use the
+                    following syntax:
+                  </p>
+                  <b>Syntax:</b>
+                  <p>css("propertyname");</p>
+                  <p>{'$("p").css("background-color");'}</p>
+                  <b>Set Multiple CSS Properties</b>
+                  <p>
+                    {
+                      'css({"propertyname":"value","propertyname":"value",...});'
+                    }
+                  </p>
+                  <p>
+                    {
+                      '$("p").css({"background-color": "yellow", "font-size": "200%"});'
+                    }
+                  </p>
+                </li>
+              </ol>
             </div>
           </div>
         </>
