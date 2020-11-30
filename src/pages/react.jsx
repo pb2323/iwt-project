@@ -20,32 +20,30 @@ export default class reactPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                Introduction
               </h1>
               <ul>
+                <li>React is a JavaScript library created by Facebook.</li>
+                <br />
+                <li>React is a tool for building UI components.</li>
+                <br />
+                <li>React creates a VIRTUAL DOM in memory.</li>
+                <br />
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
+                  Instead of manipulating the browser's DOM directly, React
+                  creates a virtual DOM in memory, where it does all the
+                  necessary manipulating, before making the changes in the
+                  browser DOM.
                 </li>
+                <br />
                 <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
+                  React only changes what needs to be changed! It finds out what
+                  changes have been made, and changes only what needs to be
+                  changed.
                 </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <br />
               </ul>
             </div>
             <div
@@ -57,31 +55,30 @@ export default class reactPage extends Component {
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                React Events
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                Just like HTML, React can perform actions based on user events.
+                React has the same events as HTML: click, change, mouseover etc.
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
+              <p style={{ padding: "10px" }}>
+                <b>Adding Events</b>
                 <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
                 <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
+                React events are written in camelCase syntax: onClick instead of
+                onclick.
                 <br />
-              </ul>
+                <br />
+                React event handlers are written inside curly braces:
+                <br />
+                {' onClick={shoot}  instead of onClick="shoot()".'}
+                <br />
+                <br />
+                <b>React:</b>
+                <br />
+                <br />
+                {"<button onClick={shoot}>Take the Shot!</button>"}
+              </p>
             </div>
             <div
               style={{
@@ -89,8 +86,8 @@ export default class reactPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "3%",
+                height: "700px",
               }}
             >
               <h1
@@ -100,76 +97,92 @@ export default class reactPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                React Lifecycle
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                Each component in React has a lifecycle which you can monitor
+                and manipulate during its three main phases. The three phases
+                are: <b>Mounting</b>, <b>Updating</b>, <b>and Unmounting</b>.
               </p>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                <b>Mounting</b>
+                <br />
+                Mounting means putting elements into the DOM. React has four
+                built-in methods that gets called, in this order, when mounting
+                a component:
+                <ol>
+                  <li>constructor()</li>
+                  <li>componentDidMount()</li>
+                  <li>render()</li>
+                  <br />
+                </ol>
+                The <b>render</b>() method is required and will always be
+                called, the others are optional and will be called if you define
+                them.
+                <br />
+                <br />
+                The <b>constructor</b>() method is called before anything else,
+                when the component is initiated, and it is the natural place to
+                set up the initial state and other initial values.
+                <br />
+                <br />
+                <b>Example:</b>
               </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
-              </p>
+              <pre>
+                {`
+    class Header extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {favoritecolor: "red"};
+      }
+      render() {
+        return (
+          <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+        );
+      }
+    }
+
+    ReactDOM.render(<Header />, document.getElementById('root'));
+
+                `}
+              </pre>
             </div>
             <div
               style={{
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
+                width: "90%",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
+                Styling React Using CSS
               </h1>
               <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
+                There are many ways to style React with CSS, this tutorial will
+                take a closer look at inline styling, and CSS stylesheet.
               </p>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
+                <b>Inline Styling</b>
+                <br />
+                To style an element with the inline style attribute, the value
+                must be a JavaScript object:
               </p>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
+                <b>Example:</b>
+                <pre>{`
+class MyHeader extends React.Component {
+  render() {
+    return (
+      <div>
+      <h1 style={{color: "red"}}>Hello Style!</h1>
+      <p>Add a little style!</p>
+      </div>
+    );
+  }
+}
+
+`}</pre>
               </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
-              </p>
-              <ul>
-                <li>
-                  Front End Developers, who work on the front end designing
-                </li>
-                <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
-                </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
-              </ul>
             </div>
           </div>
         </>
