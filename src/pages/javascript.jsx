@@ -40,11 +40,6 @@ export default class JavascriptPage extends Component {
                 <br />
               </ul>
             </div>
-            <img
-              style={{ position: "absolute", left: "50%", top: "3%" }}
-              src="DOM.gif"
-              alt="DOM"
-            />
             <div
               style={{
                 backgroundColor: "#eeeeee",
@@ -54,47 +49,36 @@ export default class JavascriptPage extends Component {
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Finding HTML Elements
+                Standard Objects
               </h1>
               <p style={{ padding: "10px" }}>
-                When you want to access HTML elements with JavaScript, you have
-                to find the elements first. There are a couple of ways to do
-                this:
+                <ol>
+                  <li>Array</li>
+                  <b>Declaration:</b>var arr=new Array()
+                  <br />
+                  <br />
+                  <li>Date</li>
+                  <b>Declaration:</b>var Date=new Date()
+                  <br />
+                  <br />
+                  <li>Math</li>
+                  <b>Declaration:</b>var random=Math.random()
+                  <br />
+                  <br />
+                  <li>Number</li>
+                  <b>Declaration:</b>var number=new Number()
+                  <br />
+                  <br />
+                  <li>Object</li>
+                  <b>Declaration:</b>var number=new Object()
+                  <br />
+                  <br />
+                  <li>String</li>
+                  <b>Declaration:</b>var number=new String()
+                  <br />
+                  <br />
+                </ol>
               </p>
-              <ul>
-                <li>
-                  Finding HTML elements by id
-                  <br />
-                  <b>Example: </b>
-                  <br />
-                  var myElement = document.getElementById("intro");
-                </li>
-                <br />
-                <li>
-                  Finding HTML elements by tag name
-                  <br />
-                  <b>Example: </b>
-                  <br />
-                  var x = document.getElementsByTagName("p");
-                </li>
-                <br />
-                <li>
-                  Finding HTML elements by class name
-                  <br />
-                  <b>Example: </b>
-                  <br />
-                  var x = document.getElementsByClassName("intro");
-                </li>
-                <br />
-                <li>
-                  Finding HTML elements by CSS selectors
-                  <br />
-                  <b>Example: </b>
-                  <br />
-                  var x = document.querySelectorAll("p.intro");
-                </li>
-                <br />
-              </ul>
             </div>
             <div
               style={{
@@ -102,8 +86,8 @@ export default class JavascriptPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "45%",
-                height: "370px",
+                top: "3%",
+                height: "750px",
               }}
             >
               <h1
@@ -113,33 +97,60 @@ export default class JavascriptPage extends Component {
                   margin: "0",
                 }}
               >
-                DOM EventListener
+                Statements and Declarations
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
+                <ul>
+                  <li>
+                    let
+                    <pre style={{ margin: "0", padding: "0" }}>{`
+let a=10;
+              `}</pre>
+                    assigns 10 value to a which is changeable
+                  </li>
+                  <br />
+                  <li>
+                    const
+                    <pre style={{ margin: "0", padding: "0" }}>{`
+const a=10;
+              `}</pre>
+                    assigns 10 value to a which cannot be changed
+                  </li>
+                  <br />
+                  <li>
+                    for-in
+                    <pre style={{ margin: "0", padding: "0" }}>{`
+for(let a in [1,2,3])
+console.log(a)
+              `}</pre>
+                    console logs 0 1 2
+                  </li>
+                  <br />
+                  <li>
+                    for-of
+                    <pre style={{ margin: "0", padding: "0" }}>{`
+for(let a of [1,2,3])
+console.log(a)
+              `}</pre>
+                    console logs 1 2 3
+                  </li>
+                  <br />
+                  <li>
+                    if-else
+                    <pre style={{ margin: "0", padding: "0" }}>{`
+if(true)
+{
+  console.log(1);
+}
+else
+{
+  console.log(0)
+}
+              `}</pre>
+                    console logs 1
+                  </li>
+                  <br />
+                </ul>
               </p>
             </div>
             <div
@@ -149,40 +160,27 @@ export default class JavascriptPage extends Component {
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
+                Functions
               </h1>
               <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
+                After introduction of ES5 functions are mainly of two types
+                <ol>
+                  <li>Normal function</li>
+                  <li>Arrow function</li>
+                </ol>
+                <pre>
+                  {`
+Normal function:                         Arrow Function:
+
+let myFunc = {                      let myFunc = {
+  showArgs(){                         showArgs: () => {
+   console.log(arguments);                console.log(...arguements);
+  }                                     }
+ };                                   };
+ myFunc.showArgs(1, 2, 3, 4);          myFunc.showArgs(1, 2, 3, 4);
+                  `}
+                </pre>
               </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
-              </p>
-              <ul>
-                <li>
-                  Front End Developers, who work on the front end designing
-                </li>
-                <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
-                </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
-              </ul>
             </div>
           </div>
         </>
