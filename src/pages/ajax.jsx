@@ -20,7 +20,7 @@ export default class ajaxPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "49%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
                 AJAX
               </h1>
@@ -54,46 +54,12 @@ export default class ajaxPage extends Component {
             <div
               style={{
                 backgroundColor: "#eeeeee",
-                marginTop: "30px",
-                width: "40%",
-                height: "370px",
-              }}
-            >
-              <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
-              </h1>
-              <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
-              </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
-                <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
-                <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
-                <br />
-              </ul>
-            </div>
-            <div
-              style={{
-                backgroundColor: "#eeeeee",
+                marginTop: "0px",
+                padding: "0px",
                 width: "40%",
                 position: "absolute",
-                left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "3%",
+                left: "55%",
               }}
             >
               <h1
@@ -103,75 +69,209 @@ export default class ajaxPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                Methods
               </h1>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
-              </p>
+              <table
+                style={{
+                  border: "2px solid black",
+                  padding: "20px",
+                  textAlign: "center",
+                }}
+              >
+                <tr>
+                  <th>S.No</th>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    1
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    new XMLHttpRequest()
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Creates a new XMLHttpRequest object
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    2
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    getAllResponseHeaders()
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Returns header information
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    3
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    getResponseHeader()
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Returns specific header information
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    4
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    open(method,url,async,user,psw)
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Specifies the request
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    5
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    send(string)
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Sends the request to the server. Used for POST requests
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    6
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    setRequestHeader()
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Adds a label/value pair to the header to be sent
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    7
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    onreadystatechange
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Defines a function to be called when the readyState property
+                    changes
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    8
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    readyState
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Holds the status of the XMLHttpRequest.
+                    <ol>
+                      <li>request not initialized</li>
+                      <li>server connection established</li>
+                      <li>request received</li>
+                      <li> processing request</li>
+                      <li>request finished and response is ready</li>
+                    </ol>
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    9
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    responseText
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Returns the response data as a string
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    10
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    status
+                  </td>
+                  <td style={{ border: "2px solid black", padding: "5px" }}>
+                    Returns the status-number of a request
+                    <ol>
+                      <li>OK</li>
+                      <li>Forbidden</li>
+                      <li>Not Found</li>
+                    </ol>
+                  </td>
+                </tr>
+              </table>
             </div>
             <div
               style={{
                 backgroundColor: "#eeeeee",
-                marginTop: "30px",
+                width: "49%",
+                height: "85%",
               }}
             >
-              <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
+              <h1
+                style={{
+                  backgroundColor: "#4caf50",
+                  textAlign: "center",
+                  margin: "0",
+                }}
+              >
+                Example
               </h1>
+              <pre style={{ padding: "10px" }}>
+                {`
+HTML File:                            Function loadDoc()
+
+
+<!DOCTYPE html>                       function loadDoc() {
+<html>                                var xhttp = new XMLHttpRequest();
+<body>                                xhttp.onreadystatechange = function() {
+                                
+<div id="demo">                       if (this.readyState == 4 && this.status == 200)
+<h2>Let AJAX change this text</h2>    {document.getElementById("demo").innerHTML  
+<button type="button"                 this.responseText;
+onclick="loadDoc()">                  }
+Change Content                        };
+</button>                             xhttp.open("GET", "ajax_info.txt", true);
+</div>                                xhttp.send();}
+</body>
+
+</html>`}
+              </pre>
               <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
+                <b>"ajax_info.txt" looks like this:</b>
+                <pre style={{ padding: "10px", margin: "0" }}>
+                  {`
+<h1>AJAX</h1>
+<p>AJAX is not a programming language.</p>
+<p>AJAX is a technique for accessing web servers from a web page.</p>
+<p>AJAX stands for Asynchronous JavaScript And XML.</p>
+`}
+                </pre>
               </p>
               <ul>
                 <li>
-                  Front End Developers, who work on the front end designing
+                  The HTML page contains a {"<div>"} section and a {"<button>"}.
                 </li>
+                <br />
+
                 <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
+                  The {"<div>"} section is used to display information from a
+                  server.
                 </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
+                <br />
+                <li>The {"<button>"} calls a function (if it is clicked).</li>
+                <br />
+                <li>
+                  The function requests data from a web server and displays it:
+                </li>
+                <br />
               </ul>
             </div>
           </div>
