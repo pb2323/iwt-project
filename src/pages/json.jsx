@@ -20,68 +20,70 @@ export default class JSONPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div
+              style={{
+                backgroundColor: "#eeeeee",
+                width: "45%",
+                height: "320px",
+              }}
+            >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                JSON - Introduction
               </h1>
               <ul>
+                <li>JSON: JavaScript Object Notation.</li>
+                <br />
+                <li>JSON is a syntax for storing and exchanging data.</li>
+                <br />
+                <li>JSON is text, written with JavaScript object notation.</li>
+                <br />
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
+                  JSON is text, and we can convert any JavaScript object into
+                  JSON, and send JSON to the server.
                 </li>
+                <br />
                 <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
+                  We can also convert any JSON received from the server into
+                  JavaScript objects.
                 </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <br />
               </ul>
             </div>
             <div
               style={{
                 backgroundColor: "#eeeeee",
-                marginTop: "30px",
-                width: "40%",
-                height: "370px",
+                width: "45%",
+                height: "330px",
               }}
             >
-              <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+              <h1
+                style={{
+                  backgroundColor: "#4caf50",
+                  textAlign: "center",
+                  marginTop: "50px",
+                }}
+              >
+                JSON.stringify()
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                A common use of JSON is to exchange data to/from a web server.
+                When sending data to a web server, the data has to be a string.
+                Convert a JavaScript object into a string with JSON.stringify().
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
+              <p style={{ padding: "10px" }}>
+                <b>Stringify a JavaScript Object</b>
+              </p>
+              <p style={{ padding: "10px" }}>
+                Imagine we have this object in JavaScript:
                 <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
+                {'var obj = { name: "John", age: 30, city: "New York" };'}
+              </p>
+              <p style={{ padding: "10px" }}>
+                Use the JavaScript function JSON.stringify() to convert it into
+                a string.
                 <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
-                <br />
-              </ul>
+                var myJSON = JSON.stringify(obj);
+              </p>
             </div>
             <div
               style={{
@@ -89,8 +91,8 @@ export default class JSONPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "0%",
+                height: "340px",
               }}
             >
               <h1
@@ -100,39 +102,79 @@ export default class JSONPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                JSON.parse()
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                A common use of JSON is to exchange data to/from a web server.
+                When receiving data from a web server, the data is always a
+                string. Parse the data with JSON.parse(), and the data becomes a
+                JavaScript object.
               </p>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                <b>Example - Parsing JSON</b>
               </p>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
+                Imagine we received this text from a web server:
+                <br />
+                <q>{"{'name':'John', 'age':30, 'city':'New York'}"}</q>
+              </p>
+              <p style={{ padding: "10px" }}>
+                Use the JavaScript function JSON.parse() to convert text into a
+                JavaScript object:
+                <br />
+                var obj=JSON.parse(
+                <q>{"{'name':'John', 'age':30, 'city':'New York'}"}</q>);
               </p>
             </div>
             <div
               style={{
                 backgroundColor: "#eeeeee",
+                width: "40%",
+                position: "absolute",
+                left: "50%",
+                top: "45%",
+                height: "340px",
                 marginTop: "30px",
+              }}
+            >
+              <h1
+                style={{
+                  backgroundColor: "#4caf50",
+                  textAlign: "center",
+                  margin: "0",
+                }}
+              >
+                JSON Objects
+              </h1>
+              <p style={{ padding: "10px" }}>
+                JSON objects are written in key/value pairs. Keys must be
+                strings, and values must be a valid JSON data type (string,
+                number, object, array, boolean or null). Keys and values are
+                separated by a colon. Each key/value pair is separated by a
+                comma.
+              </p>
+              <p style={{ padding: "10px" }}>
+                <b>Object Syntax</b>
+              </p>
+              <p style={{ padding: "10px" }}>
+                {"{ 'name':'John', 'age':30, 'car':null }"}
+              </p>
+              <p style={{ padding: "10px" }}>
+                You can access the object values by using dot (.) notation:
+                <br />
+                var myObj=
+                {"{'name':'John', 'age':30, 'city':'New York'}"});
+                <br />
+                x=myObj.name;
+              </p>
+            </div>
+            {/* <div
+              style={{
+                backgroundColor: "#eeeeee",
+                marginTop: "30px",
+                position: "absolute",
+                left: "30%",
+                width: "40%",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
@@ -170,7 +212,7 @@ export default class JSONPage extends Component {
                 </li>
                 <li>Full Stack Developers who work on both these stacks.</li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </>
       );
