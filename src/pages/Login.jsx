@@ -32,8 +32,7 @@ class Login extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
   render() {
-    if (this.state.shouldProceed) return <Redirect to="/" />;
-    else {
+    if (!localStorage.getItem("user")) {
       return (
         <>
           <center>
@@ -76,7 +75,7 @@ class Login extends Component {
           </div>
         </>
       );
-    }
+    } else return <Redirect to="/" />;
   }
 }
 export default Login;

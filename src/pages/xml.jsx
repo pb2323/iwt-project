@@ -20,32 +20,21 @@ export default class XMLPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                XML
               </h1>
               <ul>
-                <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
-                </li>
-                <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
-                </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <li>XML stands for eXtensible Markup Language</li>
+                <br />
+                <li>XML is a markup language much like HTML</li>
+                <br />
+                <li>XML was designed to store and transport data</li>
+                <br />
+                <li>XML was designed to be self-descriptive</li>
+                <br />
+                <li>XML is a W3C Recommendation</li>
+                <br />
               </ul>
             </div>
             <div
@@ -53,34 +42,30 @@ export default class XMLPage extends Component {
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
                 width: "40%",
-                height: "370px",
+                height: "300px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                Difference Between XML and HTML
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                XML and HTML were designed with different goals:
               </p>
               <ul>
                 <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
+                  XML was designed to carry data - with focus on what data is
                 </li>
                 <br />
                 <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
+                  HTML was designed to display data - with focus on how data
+                  looks
                 </li>
                 <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
+                <li>XML tags are not predefined like HTML tags are</li>
                 <br />
+                <li>XML Separates Data from HTML</li>
+                <br />
+                <li>XML Simplifies Things</li>
               </ul>
             </div>
             <div
@@ -89,8 +74,9 @@ export default class XMLPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "3%",
+                height: "560px",
+                margin: "0",
               }}
             >
               <h1
@@ -100,75 +86,82 @@ export default class XMLPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                Example
               </h1>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+              <p style={{ padding: "10px", margin: "0" }}>
+                <pre style={{ margin: "0" }}>
+                  {`
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book category="cooking">
+	<title lang="en">Everyday Italian</title>
+	<author>Giada De Laurentiis</author>
+	 <year>2005</year>
+	<price>30.00</price>
+  </book>
+  <book category="children">
+	<title lang="en">Harry Potter</title>
+	<author>J K. Rowling</author>
+	 <year>2005</year>
+	<price>29.99</price>
+  </book>
+  <book category="web">
+	<title lang="en">XQuery Kick Start</title>
+	<author>James McGovern</author>
+	 <author>Per Bothner</author>
+	<author>Kurt Cagle</author>
+	 <author>James Linn</author>
+	<author>Vaidyanathan Nagarajan</author>
+	<year>2003</year>
+	 <price>49.99</price>
+  </book>
+  <book category="web" cover="paperback">
+	<title lang="en">Learning XML</title>
+	 <author>Erik T. Ray</author>
+	<year>2003</year>
+	 <price>39.95</price>
+  </book>
+</bookstore>                  
+                  `}
+                </pre>
               </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
-              </p>
+            </div>
+            <div
+              style={{
+                width: "40%",
+                position: "absolute",
+                left: "50%",
+                top: "85%",
+
+                margin: "10px",
+              }}
+            >
+              <img src={"xml.png"} className="img-responsive" alt="img" />
             </div>
             <div
               style={{
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
+                width: "40%",
+                height: "300px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
+                XML TREE
               </h1>
-              <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
-              </p>
               <ul>
+                <li>XML documents are formed as element trees.</li>
+                <br />
                 <li>
-                  Front End Developers, who work on the front end designing
+                  An XML tree starts at a root element and branches from the
+                  root to child elements.
                 </li>
-                <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
-                </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
+                <br />
+                <li>All elements can have sub elements (child elements):</li>
+                <br />
+                <li>XML uses a much self-describing syntax.</li>
+                <br />
+                <li>XML Tags are Case Sensitive</li>
               </ul>
             </div>
           </div>

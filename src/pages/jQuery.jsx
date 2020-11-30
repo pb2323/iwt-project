@@ -20,32 +20,35 @@ export default class jQueryPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                What is jQuery
               </h1>
               <ul>
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
+                  jQuery is a lightweight, "write less, do more", JavaScript
+                  library.
                 </li>
+                <br />
                 <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
+                  jQuery takes a lot of common tasks that require many lines of
+                  JavaScript code to accomplish, and wraps them into methods
+                  that you can call with a single line of code.
                 </li>
+                <br />
                 <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
+                  jQuery also simplifies a lot of the complicated things from
+                  JavaScript, like AJAX calls and DOM manipulation.
                 </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <br />
+                <li>The jQuery library contains the following features</li>
+                <ol>
+                  <li>HTML/DOM manipulation</li>
+                  <li>CSS manipulation</li>
+                  <li>HTML event methods</li>
+                  <li>Effects and animations</li>
+                  <li>AJAX</li>
+                </ol>
               </ul>
             </div>
             <div
@@ -89,7 +92,7 @@ export default class jQueryPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
+                top: "3%",
                 height: "370px",
               }}
             >
@@ -100,25 +103,21 @@ export default class jQueryPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                jQuery Syntax
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                Basic syntax is: <b> $(selector).action()</b>
               </p>
               <p style={{ padding: "10px" }}>
                 <b>
                   <u>Javascript</u>
                 </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                Many of the biggest companies on the Web use jQuery, such as:
+                <ul>
+                  <li>Google</li>
+                  <li>Microsoft</li>
+                  <li>Netflix</li>
+                </ul>
               </p>
               <p style={{ padding: "10px" }}>
                 <b>

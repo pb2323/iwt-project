@@ -7,22 +7,22 @@ export default class Navbar extends Component {
       return <Redirect to="/login" />;
     return (
       <span>
-        <button
-          onClick={() => localStorage.setItem("user", "")}
-          style={{ width: "10%", float: "right" }}
-        >
-          <Link style={{ textDecoration: "none" }} to="/login">
+        <Link style={{ textDecoration: "none" }} to="/login">
+          <button
+            onClick={() => localStorage.setItem("user", "")}
+            style={{ width: "10%", float: "right" }}
+          >
             Logout
-          </Link>
-        </button>
+          </button>
+        </Link>
         <h1 style={{ display: "inline-block", marginLeft: "27%" }}>
           <u> Internet and Web Technology</u>
         </h1>
-        <button type="primary" style={{ width: "10%", float: "left" }}>
-          <Link style={{ textDecoration: "none" }} to="/">
+        <Link style={{ textDecoration: "none" }} to="/">
+          <button type="primary" style={{ width: "10%", float: "left" }}>
             Home
-          </Link>
-        </button>
+          </button>{" "}
+        </Link>
       </span>
     );
   }

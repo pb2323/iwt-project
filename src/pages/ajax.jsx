@@ -20,33 +20,36 @@ export default class ajaxPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                AJAX
               </h1>
               <ul>
+                <li>AJAX = Asynchronous JavaScript And XML.</li>
+                <br />
+                <li>AJAX is not a programming language.</li>
+                <br />
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
-                </li>
-                <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
-                </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
+                  AJAX just uses a combination of:
+                  <ol>
+                    <li>
+                      A browser built-in XMLHttpRequest object (to request data
+                      from a web server)
+                    </li>
+                    <br />
+                    <li>
+                      JavaScript and HTML DOM (to display or use the data)
+                    </li>
+                    <br />
+                  </ol>
                 </li>
               </ul>
+              <p style={{ padding: "10px" }}>
+                AJAX allows web pages to be updated asynchronously by exchanging
+                data with a web server behind the scenes. This means that it is
+                possible to update parts of a web page, without reloading the
+                whole page.
+              </p>
             </div>
             <div
               style={{

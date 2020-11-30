@@ -20,32 +20,23 @@ export default class HTMLPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                What is HTML
               </h1>
               <ul>
+                <li>HTML stands for Hyper Text Markup Language</li>
+                <br />
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
-                </li>
+                  HTML is the standard markup language for creating Web pages
+                </li>{" "}
+                <br />
+                <li>HTML describes the structure of a Web page</li> <br />
+                <li>HTML consists of a series of elements</li> <br />
                 <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
-                </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                  HTML elements tell the browser how to display the content
+                </li>{" "}
+                <br />
               </ul>
             </div>
             <div
@@ -53,35 +44,34 @@ export default class HTMLPage extends Component {
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
                 width: "40%",
-                height: "370px",
+                height: "400px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                What is a Markup Language
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                A markup language is a computer language that uses tags to
+                define elements within a document. It is human-readable, meaning
+                markup files contain standard words, rather than typical
+                programming syntax. While several markup languages exist, the
+                two most popular are HTML and XML.
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
-                <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
-                <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
-                <br />
-              </ul>
+              <p style={{ padding: "10px" }}>
+                HTML is a markup language used for creating webpages. The
+                contents of each webpage are defined by HTML tags. Basic page
+                tags, such as {"<head>"}, {"<body>"}, and {"<div>"} define
+                sections of the page, while tags such as {"<table>"}, {"<form>"}
+                , {"<image>"}, and {"<a>"} define elements within the page. Most
+                elements require a beginning and end tag, with the content
+                placed between the tags. For example, a link to the course home
+                page for IWT may use the following HTML code:
+              </p>
+              <p style={{ color: "blue", padding: "10px" }}>
+                {
+                  '<a href=" http://class.tempzsoft.com/login-register.php#" >  IWT Course class</a>'
+                }
+              </p>
             </div>
             <div
               style={{
@@ -89,8 +79,8 @@ export default class HTMLPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "3%",
+                height: "80%",
               }}
             >
               <h1
@@ -100,34 +90,57 @@ export default class HTMLPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                Template
               </h1>
+              <pre style={{ padding: "10px" }}>
+                {`   <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Page Title</title>
+    </head>
+    <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph. </p>
+    </body>
+    </html>`}
+              </pre>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                <b>Explanation:</b>
               </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
-              </p>
+              <ul>
+                <li>
+                  The {"<!DOCTYPE html>"} declaration defines that this document
+                  is an HTML5 document
+                </li>
+                <br />
+
+                <li>
+                  The {"<html>"} element is the root element of an HTML page
+                </li>
+                <br />
+                <li>
+                  The {"<head>"} element contains meta information about the
+                  HTML page
+                </li>
+                <br />
+                <li>
+                  The {"<title>"} element specifies a title for the HTML page
+                  (which is shown in the browser's title bar or in the page's
+                  tab)
+                </li>
+                <br />
+                <li>
+                  The {"<body>"} element defines the document's body, and is a
+                  container for all the visible contents, such as headings,
+                  paragraphs, images, hyperlinks, tables, lists, etc.
+                </li>
+                <br />
+
+                <li>The {"<h1>"}element defines a large heading</li>
+                <br />
+                <li>The {"<p>"} element defines a paragraph</li>
+                <br />
+              </ul>
             </div>
             <div
               style={{
@@ -136,40 +149,158 @@ export default class HTMLPage extends Component {
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
+                HTML Tags:
               </h1>
-              <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
-              </p>
-              <ul>
-                <li>
-                  Front End Developers, who work on the front end designing
-                </li>
-                <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
-                </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
-              </ul>
+              <div>
+                <table
+                  style={{
+                    border: "2px solid black",
+                    padding: "20px",
+                    textAlign: "center",
+                  }}
+                >
+                  <tr>
+                    <th>S.No</th>
+                    <th>Tag</th>
+                    <th>Explanation</th>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      1
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"(<HTML>. . . </HTML>)"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      The entire HTML document
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      2
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"(<HEAD> . . . </HEAD>)"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      The head, or prologue, of the HTML document
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      3
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"(<BODY> . . . </BODY>)"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      All the other content in the HTML document
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      4
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<TITLE> . . . </TITLE>"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      The title of the document
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      5
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<BR>"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      This tag will show a blank line.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div
+                style={{
+                  display: "inline-block",
+                  position: "absolute",
+                  top: "99%",
+                  right: "5%",
+                }}
+              >
+                <table
+                  style={{
+                    border: "2px solid black",
+                    padding: "20px",
+                    textAlign: "center",
+                    position: "relative",
+                    right: "0",
+                    bottom: "0",
+                  }}
+                >
+                  <tr>
+                    <th>S.No</th>
+                    <th>Tag</th>
+                    <th>Explanation</th>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      6
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<!- . . . ->"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      Tag to write comments which are not visible in display
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      7
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<style>"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      Defines style information for a document
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      8
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<script>"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      Defines a client-side script
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      9
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<B> . . . </B>"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      Makes text bold
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      10
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      {"<I> . . . </I>"}
+                    </td>
+                    <td style={{ border: "2px solid black", padding: "5px" }}>
+                      Makes text italic
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </>
