@@ -75,7 +75,7 @@ class Login extends Component {
                     required
                   />
                 </label>
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
               </div>
               <p>
                 Want to Login?<Link to="/login">Click here</Link>{" "}
