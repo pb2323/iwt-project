@@ -20,32 +20,22 @@ export default class javaPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                Introduction-JAVA
               </h1>
+              <p style={{ padding: "10px" }}>
+                Java is a popular programming language, created in 1995. It is
+                owned by Oracle, and more than 3 billion devices run Java. It is
+                used for:
+              </p>
               <ul>
-                <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
-                </li>
-                <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
-                </li>
-                <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <li>Mobile applications (specially Android apps)</li>
+                <li>Desktop applications</li>
+                <li>Web applications</li>
+                <li>Web servers and application servers</li>
+                <li>Games</li>
+                <li>Database connection</li>
               </ul>
             </div>
             <div
@@ -53,35 +43,107 @@ export default class javaPage extends Component {
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
                 width: "40%",
-                height: "370px",
+                height: "520px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                Encapsulation
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                <b>
+                  The meaning of Encapsulation, is to make sure that "sensitive"
+                  data is hidden from users. To achieve this, you must:
+                </b>
+                <ul>
+                  <li>declare class variables/attributes as private</li>
+                  <li>
+                    provide public get and set methods to access and update the
+                    value of a private variable
+                  </li>
+                </ul>
+                <pre>{`
+public class Main {
+  private String name; // private = restricted access
+
+  // Getter
+  public String getName() {
+    return name;
+  }
+
+  // Setter
+  public void setName(String newName) {
+    this.name = newName;
+  }
+}
+            `}</pre>
+                The get method returns the variable value, and the set method
+                sets the value.
+                <br />
+                <br />
+                Syntax for both is that they start with either get or set,
+                followed by the name of the variable, with the first letter in
+                upper case:
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
-                <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
-                <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
-                <br />
-              </ul>
+            </div>
+            <div
+              style={{
+                backgroundColor: "#eeeeee",
+                width: "40%",
+                height: "580px",
+                position: "absolute",
+                left: "50%",
+                top: "55%",
+              }}
+            >
+              <h1
+                style={{
+                  backgroundColor: "#4caf50",
+                  textAlign: "center",
+                  margin: "0",
+                }}
+              >
+                Inheritance
+              </h1>
+              <p style={{ padding: "10px" }}>
+                <b>
+                  In Java, it is possible to inherit attributes and methods from
+                  one class to another. We group the "inheritance concept" into
+                  two categories:
+                </b>
+                <ul>
+                  <li>
+                    <b>subclass</b> (child) - the class that inherits from
+                    another class
+                  </li>
+                  <li>
+                    <b>superclass</b> (parent) - the class being inherited from
+                  </li>
+                </ul>
+                <pre>{`
+class Vehicle {
+  protected String brand = "Ford";        // Vehicle attribute
+  public void honk() {                    // Vehicle method
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";    // Car attribute
+  public static void main(String[] args) {
+
+    // Create a myCar object
+    Car myCar = new Car();
+
+    // Call the honk() method (from the Vehicle class) on the myCar
+    object myCar.honk();
+
+    // Display the value of the brand attribute (from the Vehicle
+    class) and the value of the modelName from the Car class
+    System.out.println(myCar.brand + " " + myCar.modelName);
+  }
+}
+            `}</pre>
+              </p>
             </div>
             <div
               style={{
@@ -89,7 +151,7 @@ export default class javaPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
+                top: "3%",
                 height: "370px",
               }}
             >
@@ -100,36 +162,74 @@ export default class javaPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                JAVA - OOP
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                Classes and objects are the two main aspects of object-oriented
+                programming. Look at the following illustration to see the
+                difference between class and objects:
+                <div style={{ marginLeft: "30%  " }}>
+                  <table style={{ border: "2px solid black" }}>
+                    <tr>
+                      <th>class</th>
+                      <th>objects</th>
+                    </tr>
+                    <tr>
+                      <td
+                        style={{
+                          alignContent: "center",
+                          border: "2px solid black",
+                        }}
+                        rowSpan={3}
+                      >
+                        Fruit
+                      </td>
+                      <td
+                        style={{
+                          alignContent: "center",
+                          border: "2px solid black",
+                        }}
+                      >
+                        Apple
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style={{
+                          alignContent: "center",
+                          border: "2px solid black",
+                        }}
+                      >
+                        Banana
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style={{
+                          alignContent: "center",
+                          border: "2px solid black",
+                        }}
+                      >
+                        Mango
+                      </td>
+                    </tr>
+                  </table>
+                </div>
               </p>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
+                So, a class is a template for objects, and an object is an
+                instance of a class. When the individual objects are created,
+                they inherit all the variables and methods from the class. You
+                will learn much more about classes and objects in the next
+                chapter.
               </p>
             </div>
-            <div
+            <img
+              src="java.webp"
+              alt="java"
+              style={{ height: "300px", marginLeft: "80px" }}
+            />
+            {/* <div
               style={{
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
@@ -170,7 +270,7 @@ export default class javaPage extends Component {
                 </li>
                 <li>Full Stack Developers who work on both these stacks.</li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </>
       );
