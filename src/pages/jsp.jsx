@@ -20,32 +20,32 @@ export default class jspPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "40%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                Introduction-JSP
               </h1>
               <ul>
+                <li>It stands for Java Server Pages.</li>
+                <br />
+                <li>It is a server side technology.</li>
+                <br />
+                <li>It is used for creating web application.</li>
+                <br />
+                <li>It is used to create dynamic web content.</li>
+                <br />
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
+                  In this JSP tags are used to insert JAVA code into HTML pages.
                 </li>
+                <br />
                 <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
+                  It is a Web based technology helps us to create dynamic and
+                  platform independent web pages.
                 </li>
+                <br />
                 <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
+                  In this, Java code can be inserted in HTML/ XML pages or both.
                 </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
-                </li>
+                <br />
               </ul>
             </div>
             <div
@@ -53,35 +53,28 @@ export default class jspPage extends Component {
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
                 width: "40%",
-                height: "370px",
+                height: "320px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                Example
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                Example of Hello World
+                <pre>{`
+demo.jsp
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=ISO-8859-1">
+<title>Hello World - JSP tutorial</title>
+</head>
+<body>
+    <%= "Hello World!" %>
+</body>
+</html>
+            `}</pre>
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
-                <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
-                <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
-                <br />
-              </ul>
             </div>
             <div
               style={{
@@ -89,8 +82,8 @@ export default class jspPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "3%",
+                height: "680px",
               }}
             >
               <h1
@@ -100,33 +93,47 @@ export default class jspPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                JSP syntax
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
+                Syntax available in JSP are following
+                <ol>
+                  <li>
+                    <b>Declaration Tag-</b>It is used to declare variables.
+                    <pre>{`
+Syntax:- 
+<%!  Dec var  %>
+Example:-
+<%! int var=10; %>                
+            `}</pre>
+                  </li>
+                  <li>
+                    <b>Java Scriplets-</b>It allows us to add any number of JAVA
+                    code, variables and expressions.
+                    <pre>{`
+Syntax:- 
+<% java code %>              
+            `}</pre>
+                  </li>
+                  <li>
+                    <b>JSP Expression :-</b>It evaluates and convert the
+                    expression to a string.
+                    <pre>{`
+ Syntax:- 
+ <%= expression %> 
+  Example:- 
+ <% num1 = num1+num2 %>              
+            `}</pre>
+                  </li>
+                  <li>
+                    <b>JAVA Comments :-</b>It contains the text that is added
+                    for information which has to be ignored.
+                    <pre>{`
+Syntax:- 
+<% -- JSP Comments %>            
+            `}</pre>
+                  </li>
+                </ol>
               </p>
             </div>
             <div
@@ -136,39 +143,36 @@ export default class jspPage extends Component {
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
+                Process of Execution
               </h1>
               <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
+                Steps for Execution of JSP are following:-
               </p>
               <ul>
                 <li>
-                  Front End Developers, who work on the front end designing
+                  Create html page from where request will be sent to server eg
+                  try.html.
                 </li>
                 <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
-                </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
+                  To handle to request of user next is to create .jsp file Eg.
+                  new.jsp
+                </li>{" "}
+                <li>Create project folder structure.</li>{" "}
+                <li>Create XML file eg my.xml.</li> <li>Create WAR file.</li>
+                <li>Start Tomcat</li>
+                <li>Run Application</li>
+                <img
+                  style={{
+                    float: "right",
+                    width: "40%",
+                    height: "40%",
+                    position: "absolute",
+                    left: "60%",
+                    top: "98%",
+                  }}
+                  src="jsp.jpg"
+                  alt="jsp"
+                />
               </ul>
             </div>
           </div>
