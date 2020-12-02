@@ -20,31 +20,37 @@ export default class servletPage extends Component {
               height: "80%",
             }}
           >
-            <div style={{ backgroundColor: "#eeeeee" }}>
+            <div style={{ backgroundColor: "#eeeeee", width: "100%" }}>
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                History
+                Introduction
               </h1>
+              <p style={{ padding: "10px" }}>
+                Servlets provide a component-based, platform-independent method
+                for building Webbased applications, without the performance
+                limitations of CGI programs. Servlets have access to the entire
+                family of Java APIs, including the JDBC API to access enterprise
+                databases. This tutorial will teach you how to use Java Servlets
+                to develop your web based applications in simple and easy steps.
+              </p>
+              <b>
+                Advantages in comparison with the Common Gateway Interface
+                (CGI).
+              </b>
               <ul>
+                <li>Performance is significantly better.</li>
                 <li>
-                  Tim Berners-Lee has developed WWW, HTML, URLs, and HTTP.
+                  Servlets are platform-independent because they are written in
+                  Java.
                 </li>
                 <li>
-                  In 1980: Tim Berners-Lee invents the WWW, at CERN (the world
-                  famous nuclear research lab at Switzerland).
+                  Servlets execute within the address space of a Web server. It
+                  is not necessary to create a separate process to handle each
+                  client request.
                 </li>
                 <li>
-                  In 1989: Tim Berners-Lee invents the Web with HTML as its
-                  publishing language.
-                </li>
-                <li>
-                  In June 1994, the IETF published Berners-Lee's RFC-1630, the
-                  first Request for Comments that acknowledged the existence of
-                  URLs and URNs. Most importantly, it defined a formal syntax
-                  for Universal Resource Identifiers (URI).
-                </li>
-                <li>
-                  Vint Cerf is considered to be one of the fathers of the
-                  Internet, having been the co-inventor of TCP/IP.
+                  Java security manager on the server enforces a set of
+                  restrictions to protect the resources on a server machine. So
+                  servlets are trusted.
                 </li>
               </ul>
             </div>
@@ -52,36 +58,53 @@ export default class servletPage extends Component {
               style={{
                 backgroundColor: "#eeeeee",
                 marginTop: "30px",
-                width: "40%",
-                height: "370px",
+                width: "45%",
+                height: "650px",
               }}
             >
               <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                HTTP
+                Example
               </h1>
               <p style={{ padding: "10px" }}>
-                HTTP is a protocol which allows the fetching of resources, such
-                as HTML documents.
+                Servlets are Java classes which service HTTP requests and
+                implement the javax.servlet.Servlet interface. Web application
+                developers typically write servlets that extend
+                javax.servlet.http.HttpServlet, an abstract class that
+                implements the Servlet interface and is specially designed to
+                handle HTTP requests.
+                <pre>{`
+// Import required java libraries
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+// Extend HttpServlet class
+public class HelloWorld extends HttpServlet {
+ 
+   private String message;
+
+   public void init() throws ServletException {
+      // Do required initialization
+      message = "Hello World";
+   }
+
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+      
+      // Set response content type
+      response.setContentType("text/html");
+
+      // Actual logic goes here.
+      PrintWriter out = response.getWriter();
+      out.println("<h1>" + message + "</h1>");
+   }
+
+   public void destroy() {
+      // do nothing.
+   }
+}            
+            `}</pre>
               </p>
-              <ul>
-                <li>
-                  HTTP/1.1 was first documented in RFC 2068 in 1997. That
-                  specification was obsoleted by RFC 2616 in 1999, which was
-                  likewise replaced by the RFC 7230 family of RFCs in 2014.
-                </li>
-                <br />
-                <li>
-                  HTTP/2 is a more efficient expression of HTTP's semantics "on
-                  the wire", and was published in 2015
-                </li>
-                <br />
-                <li>
-                  HTTP/3 is the proposed successor to HTTP/2, which is already
-                  in use on the web (enabled by default in latest macOS), using
-                  UDP instead of TCP for the underlying transport protocol
-                </li>
-                <br />
-              </ul>
             </div>
             <div
               style={{
@@ -89,8 +112,8 @@ export default class servletPage extends Component {
                 width: "40%",
                 position: "absolute",
                 left: "50%",
-                top: "27%",
-                height: "370px",
+                top: "39%",
+                height: "500px",
               }}
             >
               <h1
@@ -100,76 +123,45 @@ export default class servletPage extends Component {
                   margin: "0",
                 }}
               >
-                Components of a website
+                Servlet Deployment
               </h1>
               <p style={{ padding: "10px" }}>
-                <b>
-                  <u>HTML</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
+                By default, a servlet application is located at the path{" "}
+                {"<Tomcat-installationdirectory>"}/webapps/ROOT and the class
+                file would reside in {"<Tomcat-installationdirectory>"}
+                /webapps/ROOT/WEB-INF/classes.
+                <br />
+                <br />
+                For now, let us copy HelloWorld.class into{" "}
+                {"<Tomcat-installationdirectory>"}/webapps/ROOT/WEB-INF/classes
+                and create following entries in web.xml file located in{" "}
+                {"<Tomcat-installation-directory>"}/webapps/ROOT/WEB-INF/
+                {"</Tomcat-installation-directory>"}
+                <pre>{`
+<servlet>
+<servlet-name>HelloWorld</servlet-name>
+<servlet-class>HelloWorld</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>HelloWorld</servlet-name>
+<url-pattern>/HelloWorld</url-pattern>
+</servlet-mapping>       
+              `}</pre>
+                You are almost done, now let us start tomcat server using{" "}
+                {"<Tomcat-installationdirectory>"}\bin\startup.bat (on Windows)
+                or {"<Tomcat-installationdirectory>"}/bin/startup.sh (on
+                Linux/Solaris etc.) and finally type
+                http://localhost:8080/HelloWorld in the browser's address box.
+                If everything goes fine, you would get the following result
+                <br />
+                <br />
+                <img
+                  src="servlet-example.jpg"
+                  style={{ alignItems: "center" }}
+                  alt="servlet"
+                />
               </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Javascript</u>
-                </b>
-                : This gives functionality to the HTML code written (like the
-                Nervous System) and basically helps the HTML code to be more
-                than just an unintelligible text to an end user and gives it
-                user-friendly access.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>CSS</u>
-                </b>
-                : This is the file where all the design elements of a website
-                are defined (like the Muscular System) i.e., the fonts to be
-                used, the colors, the backgrounds, the image sizes etc.
-              </p>
-            </div>
-            <div
-              style={{
-                backgroundColor: "#eeeeee",
-                marginTop: "30px",
-              }}
-            >
-              <h1 style={{ backgroundColor: "#4caf50", textAlign: "center" }}>
-                Front-end vs Backend
-              </h1>
-              <p style={{ padding: "10px" }}>
-                In website design there are generally two types of languages:
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Front End</u>
-                </b>
-                : Languages like HTML, CSS, JS etc. , which help design the
-                webpage which the end-user will be viewing.
-              </p>
-              <p style={{ padding: "10px" }}>
-                <b>
-                  <u>Back End</u>
-                </b>
-                : Languages like Java, SQL, Ruby, PHP etc. , which aid in the
-                server-side programming which holds the databases that the
-                end-user will be accessing through the website.
-              </p>
-              <p style={{ padding: "10px" }}>
-                This division results in three different kinds of
-                web-developers:
-              </p>
-              <ul>
-                <li>
-                  Front End Developers, who work on the front end designing
-                </li>
-                <li>
-                  Back End Developers, who work on the server-side i.e., back
-                  end designing of the databases
-                </li>
-                <li>Full Stack Developers who work on both these stacks.</li>
-              </ul>
             </div>
           </div>
         </>
